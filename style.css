@@ -1,0 +1,141 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    color: #333;
+    position: relative;
+}
+
+/* Floating Logo Background */
+.background-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.1);
+    opacity: 0.5;
+    animation: float 5s infinite alternate;
+    pointer-events: none; /* Prevent interaction with the logo */
+}
+
+/* Keyframes for Floating Effect */
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%) translateX(-200px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(200px);
+    }
+}
+
+/* Wrapper Styles */
+.wrapper {
+    width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Ensure it stays above the logo */
+}
+
+/* Header Styling */
+.header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Typing Test Styling */
+.content-box {
+    padding: 10px 15px;
+}
+
+.typing-test p {
+    font-size: 20px;
+    line-height: 1.6;
+    word-spacing: 5px;
+}
+
+.typing-test p span {
+    padding: 2px 4px;
+}
+
+.typing-test p span.active {
+    background-color: #ffeb3b;
+}
+
+.typing-test p span.correct {
+    background-color: #8bc34a;
+    color: white;
+}
+
+.typing-test p span.incorrect {
+    background-color: #f44336;
+    color: white;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.result-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    list-style: none;
+}
+
+.result-details li p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.result-details li span {
+    font-size: 20px;
+}
+
+.content button {
+    width: 120px;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #2196f3;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.content button:active {
+    transform: scale(0.98);
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+        margin: 10px;
+    }
+    .header h1 {
+        font-size: 24px;
+    }
+}
